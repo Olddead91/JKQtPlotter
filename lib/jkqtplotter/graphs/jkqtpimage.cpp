@@ -187,7 +187,7 @@ void JKQTPImageBase::plotImage(JKQTPEnhancedPainter& painter, QImage& image, dou
             //qDebug()<<"p1  = "<<p1<< "    p2  = "<<p2;
             //qDebug()<<"pp1 = "<<pp1<<"    pp2 = "<<pp2;
             QPointF ps1(floor((pix_plot_topleft.x()-pix_topelft.x())/pixwidth), floor((pix_plot_topleft.y()-pix_topelft.y())/pixheight));
-            QPointF ps2=ps1+QPointF(ceil(fabs(pix_plot_bottomright.x()-pix_plot_topleft.x())/pixwidth), ceil(fabs(pix_plot_bottomright.y()-pix_plot_topleft.y())/pixheight));
+            QPointF ps2(ceil((pix_plot_bottomright.x()-pix_topelft.x())/pixwidth), ceil((pix_plot_bottomright.y()-pix_topelft.y())/pixheight));
             if (ps1.x()<0) ps1.setX(0);
             if (ps1.y()<0) ps1.setY(0);
             if (ps2.x()>image.width()) ps2.setX(image.width());
